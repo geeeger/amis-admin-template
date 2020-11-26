@@ -1,0 +1,17 @@
+{
+  "name": "amis-admin-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "amis-admin",
+    "amis-editor-demo"
+  ],
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "scripts": {
+    "start": "concurrently \"yarn workspace amis-admin run start -- --port 8080\" \"yarn workspace amis-editor-demo run start -- --port 8081\""
+  }
+}
